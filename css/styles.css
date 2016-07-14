@@ -1,0 +1,293 @@
+/* Global Layout Style */
+* {
+	box-sizing: border-box;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Merriweather', serif;
+	background-color: #fff;
+}
+
+
+/* Page Style */
+header {
+	background-color: #2B3B45;
+	height: 70px;
+}
+
+.title,
+form,
+.copyright {
+	margin: 0 15px;
+}
+
+.title {
+	border-bottom: solid 4px #2B3B45;
+	margin-bottom: 3px;
+}
+
+header h1 {
+	font-size: 28px;
+	line-height: 70px;
+	color: #fff;
+	margin: 0;
+}
+
+.title h1 {
+	font-size: 24px;
+	line-height: 1.2;
+	color: #2B3B45;
+	margin-top: 30px;
+}
+
+.title p {
+	font-size: 18px;
+	line-height: 1.2;
+	color: #A4A8A8;
+	margin: 12px auto 36px;
+}
+
+form {
+	text-align: left;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0 0 30px 0;
+	border-top: solid 2px #2B3B45;
+}
+
+form legend {
+	font-size: 24px;
+	color: #2B3B45;
+	font-weight: bold;
+	padding: 30px 0 20px;
+	float: left;
+	width: 100%;
+}
+
+
+#full_name::-webkit-input-placeholder,
+#email::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  	text-align: right;
+	font-style: italic;
+}
+#full_name::-moz-placeholder,
+#email::-moz-placeholder { /* Firefox 19+ */
+  	text-align: right;
+	font-style: italic;
+}
+#full_name:-ms-input-placeholder,
+#email:-ms-input-placeholder { /* IE 10+ */
+  	text-align: right;
+	font-style: italic;
+}
+#full_name:-moz-placeholder,
+#email:-moz-placeholder { /* Firefox 18- */
+  	text-align: right;
+	font-style: italic;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	background-color: #F3F3F4;
+	width: 100%;
+	height: auto;
+	border: solid 2px #F3F3F4;
+	padding: 15px;
+	color: #777;
+	font-size: 16px;
+	border-radius: 4px;
+	outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+	border: solid 2px #376985;
+} 
+
+label {
+	color: #5A717B;
+	margin: 10px 0;
+}
+
+.contact label,
+.block-label {
+	display: block;
+}
+
+/* Special Styling for Checkbox and Radio button */
+
+.newsletter p {
+	display: inline-block;
+	color: #5A717B;
+	margin: 11px 0px 16px 15px;
+}
+
+.newsletter-checkbox,
+.newsletter-radio {
+	position: relative;
+}
+
+/* Make default checkbox not visible but still clickable */
+.newsletter-checkbox input,
+.newsletter-radio input{
+	opacity: 0;
+	position: relative;
+	z-index: 1;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+	top: 1px;
+}
+
+/* Create special checkbox and radio button on top of default input*/
+.newsletter-checkbox label,
+.newsletter-radio label {
+	cursor: pointer;
+	position: absolute;
+	width: 17px;
+	height: 17px;
+  	left: 0;
+	background: #F3F3F4;
+	border: solid 2px #F3F3F4;
+}
+	
+.newsletter-checkbox label {
+	border-radius: 4px;
+}
+
+.newsletter-radio label {
+	border-radius: 8px;
+}
+
+/* Create check mark in checkboxes */
+.newsletter-checkbox label:before {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 4px;
+	background: transparent;
+	top: 2px;
+	left: 1px;
+	border: 2px solid #376985;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+
+/* Visible when checkbox is clicked */
+.newsletter-checkbox input[type=checkbox]:checked + label:before {
+	opacity: 1;
+}
+
+.newsletter-checkbox input[type=checkbox]:checked + label {
+	border: 2px solid #376985;
+}
+
+/* Create circle in radio button */
+.newsletter-radio label:after {
+	opacity: 0;
+	content: '\2022';
+	color: #376985;
+	position: absolute;
+	font-size: 30px;
+	text-align: center;
+    line-height: 18px;
+    top: -2px;
+    left: 1px;
+}
+
+@-moz-document url-prefix() {
+    .newsletter-radio label:after {
+        top: 0px;
+    	left: -1px;
+    }
+}
+
+/* Visible when radio button is clicked */
+.newsletter-radio input[type=radio]:checked + label:after {
+	opacity: 1;
+}
+
+.newsletter-radio input[type=radio]:checked + label {
+	border: 2px solid #376985;
+}
+
+label[for="topics"] {
+	display: block;
+	padding: 20px 0px;
+}
+
+button {
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #02BFB3;
+	border-radius: 4px;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+}
+
+button:hover {
+	opacity: 0.8;
+	transition: 0.5s;
+}
+
+.copyright {
+	color: #ABAEAE;
+	font-size: 18px;
+	font-style: italic;
+	margin: 24px auto 200px;
+}
+
+/* Media queries for larger screens */
+
+@media (min-width: 760px) {
+	.title,
+	form {
+		max-width: 600px;
+		margin: 2px auto;
+	}
+
+	.contact label {
+		display: inline-block;
+		width: 20%;
+
+	}
+
+	.contact input,
+	.contact select {
+		display: inline-block;
+		width: 78%;
+		margin: 20px 0;
+
+	}
+
+	.contact #zipcode {
+		max-width: 154px;
+	}
+}
